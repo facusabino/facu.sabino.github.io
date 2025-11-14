@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facundo Herrera, Ph.D - Health Economist & Programme Evaluation Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e3c72;
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #2a5298;
+        }
+
+        h3 {
+            color: #2a5298;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about-content p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: #e3f2fd;
+            color: #1e3c72;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Timeline Items */
+        .timeline-item {
+            padding-left: 2rem;
+            border-left: 3px solid #2a5298;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2a5298;
+        }
+
+        .timeline-item h4 {
+            color: #1e3c72;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Publications */
+        .publication {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #2a5298;
+        }
+
+        .publication h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .publication a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .publication a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #2a5298;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .contact-item a {
+            color: #2a5298;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Facundo Herrera, Ph.D</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Facundo Herrera, Ph.D</h1>
+                <p class="subtitle">Associate Director & Senior Economist at Ipsos UK</p>
+                <p>Leading programme evaluation projects using experimental and quasi-experimental designs, with 15+ years of experience in causal inference and evaluation methodology.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#publications" class="btn btn-secondary">View Research</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am Associate Director and Senior Economist at Ipsos UK, where I lead programme evaluation projects using experimental and quasi-experimental designs. I hold a PhD in Health Economics and Policy from Lancaster University, with research focused on health inequities, and bring over 15 years of applied experience in causal inference and evaluation methodology.</p>
+                
+                <p>My current work focuses on designing and implementing rigorous evaluation frameworks for policy interventions, with particular expertise in randomised controlled trials, difference-in-differences designs, and other causal inference methods to measure real-world programme effectiveness, complemented by process evaluations.</p>
+
+                <h3>Research Interests</h3>
+                <div class="research-interests">
+                    <span class="tag">Economics of Education</span>
+                    <span class="tag">Health Economics</span>
+                    <span class="tag">Health Inequalities</span>
+                    <span class="tag">Mental Health</span>
+                    <span class="tag">Youth</span>
+                    <span class="tag">Intersectionality</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <h4>PhD in Health Economics and Policy</h4>
+                <p class="date">Lancaster University (UK) | 2019-2024</p>
+            </div>
+            <div class="timeline-item">
+                <h4>MA in European Economic Studies</h4>
+                <p class="date">College of Europe (Bruges, Belgium) | 2012</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Lic in Economics (BA+MA)</h4>
+                <p class="date">Universidad Nacional de Córdoba (Argentina) | 2002-2007</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="timeline-item">
+                <h4>Associate Director and Senior Economist</h4>
+                <p class="date">Ipsos UK | 2023-present</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Visiting Researcher</h4>
+                <p class="date">De Montfort University (UK) | 2024-present</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Managing Consultant/Senior Economist</h4>
+                <p class="date">ICF | 2017-2023</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Analyst/Economist</h4>
+                <p class="date">RAND Europe | 2016-2017</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Research Manager/Economist</h4>
+                <p class="date">Ecorys UK | 2013-2016</p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <h3>Under Review/Submitted</h3>
+            <div class="publication">
+                <p><strong>Does more education improve mental health for ethnic minorities in the UK? The impact of ROSLA 1972</strong> - Submitted</p>
+            </div>
+
+            <h3>Working Papers</h3>
+            <div class="publication">
+                <p><strong>An intersectional Oaxaca-Blinder decomposition of the ethnic and sex mental health inequities in the UK</strong> - Work in progress</p>
+            </div>
+            <div class="publication">
+                <p><strong>A systematic review of the relationship between ethnicity and mental health inequities in the UK</strong> - Work in progress</p>
+            </div>
+
+            <h3>Published</h3>
+            <div class="publication">
+                <h4>Doctoral Thesis</h4>
+                <p>HERRERA, F., Exploring the association between ethnicity and mental health inequities: A study of ethnic minorities in the UK. [Doctoral Thesis, Lancaster University]. Lancaster University.</p>
+                <p><a href="https://doi.org/10.17635/lancaster/thesis/2549" target="_blank">https://doi.org/10.17635/lancaster/thesis/2549</a></p>
+            </div>
+
+            <div class="publication">
+                <p>BOULDING, H., KAMENETZKY, A., GHIGA, I., IOPPOLO, B., HERRERA, F., PARKS, S., MANVILLE, C., GUTHRIE, S. AND HINRICHS-KRAPELS, S., (2020). Mechanisms and pathways to impact in public health research: a preliminary analysis of research funded by the National Institute for Health Research (NIHR). BMC Medical Research Methodology, 20(1), pp.1-20.</p>
+            </div>
+
+            <div class="publication">
+                <p>DEPARTMENT OF EDUCATION (2018). The Cadet Experience: Understanding Cadet Outcomes. Research Report.</p>
+                <p><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/689698/The_cadet_experience-understanding_cadet_outcomes.pdf" target="_blank">View Report</a></p>
+            </div>
+
+            <div class="publication">
+                <p>HARTE, E., HERRERA, F., STEPANEK, M. (2016). Education of EU migrant children in EU Member States. Santa Monica, CA: RAND Corporation.</p>
+                <p><a href="http://www.rand.org/pubs/research_reports/RR1715.html" target="_blank">http://www.rand.org/pubs/research_reports/RR1715.html</a></p>
+            </div>
+
+            <div class="publication">
+                <p>MEIERKORD, A., DONLEVY, D., PENSIERO, N., HERRERA, F., & GREEN, A. D. (2016). Study of the Link between the Levels of Basic Competences and Formal Educational Attainment in a Cross-Country and Comparative Perspective. European Commission.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <div>
+                        <strong>Primary Email</strong><br>
+                        <a href="mailto:facu.sabino@gmail.com">facu.sabino@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🏢</div>
+                    <div>
+                        <strong>Lancaster University</strong><br>
+                        <a href="mailto:f.herrera@lancaster.ac.uk">f.herrera@lancaster.ac.uk</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🏢</div>
+                    <div>
+                        <strong>Ipsos</strong><br>
+                        <a href="mailto:facundo.herrera@ipsos.com">facundo.herrera@ipsos.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🏢</div>
+                    <div>
+                        <strong>De Montfort University</strong><br>
+                        <a href="mailto:f.herrera@dmu.ac.uk">f.herrera@dmu.ac.uk</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <strong>LinkedIn</strong><br>
+                        <a href="https://www.linkedin.com/in/facundo-herrera/" target="_blank">linkedin.com/in/facundo-herrera</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🔬</div>
+                    <div>
+                        <strong>ORCID</strong><br>
+                        <a href="https://orcid.org/0000-0002-2869-1419" target="_blank">0000-0002-2869-1419</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Facundo Herrera. All rights reserved.</p>
+    </footer>
+</body>
+</html>
