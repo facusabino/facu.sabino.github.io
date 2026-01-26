@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facundo Herrera, Ph.D - Health Economist & Programme Evaluation Expert</title>
+    <title>Facundo Herrera, Ph.D - Health Economist & EU Impact Assessment Specialist</title>
+    <meta name="description" content="Health economist and evaluation specialist with 20+ years experience in EU Better Regulation, impact assessments, and RCTs for European Commission, UK Government, World Bank, and IDB.">
     <style>
         * {
             margin: 0;
@@ -22,7 +23,7 @@
         header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 2rem 0;
+            padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
@@ -36,23 +37,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
             transition: opacity 0.3s;
+            font-size: 0.95rem;
         }
 
         .nav-links a:hover {
@@ -63,8 +67,7 @@
         .hero {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 4rem 2rem;
-            text-align: center;
+            padding: 3rem 2rem;
         }
 
         .hero-content {
@@ -74,12 +77,11 @@
             align-items: center;
             gap: 3rem;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
         .hero-image {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid rgba(255,255,255,0.3);
@@ -89,18 +91,24 @@
         .hero-text {
             flex: 1;
             min-width: 300px;
-            text-align: left;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
 
         .hero .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero .summary {
+            font-size: 1rem;
+            line-height: 1.7;
             opacity: 0.9;
-            margin-bottom: 1.5rem;
         }
 
         .cta-buttons {
@@ -111,12 +119,13 @@
         }
 
         .btn {
-            padding: 0.75rem 1.5rem;
+            padding: 0.7rem 1.5rem;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             transition: transform 0.2s, box-shadow 0.2s;
             display: inline-block;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
@@ -139,12 +148,12 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 2rem 2rem;
         }
 
         section {
             background: white;
-            padding: 3rem;
+            padding: 2.5rem;
             margin-bottom: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -152,7 +161,7 @@
 
         h2 {
             color: #1e3c72;
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
             border-bottom: 3px solid #2a5298;
@@ -160,18 +169,120 @@
 
         h3 {
             color: #2a5298;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-top: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
-        /* About Section */
-        .about-content p {
-            margin-bottom: 1rem;
+        h4 {
+            color: #1e3c72;
             font-size: 1.05rem;
+            margin-bottom: 0.3rem;
         }
 
-        .research-interests {
+        /* Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .expertise-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+
+        .expertise-card h4 {
+            margin-bottom: 0.8rem;
+        }
+
+        .expertise-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .expertise-card li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .expertise-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.2rem;
+            color: #1e3c72;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-org {
+            font-size: 1.05rem;
+            color: #2a5298;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-location {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.8rem;
+        }
+
+        .experience-item li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .experience-item li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Tags */
+        .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
@@ -181,13 +292,13 @@
         .tag {
             background: #e3f2fd;
             color: #1e3c72;
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.9rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
         }
 
-        /* Timeline Items */
+        /* Education & Timeline Items */
         .timeline-item {
             padding-left: 2rem;
             border-left: 3px solid #2a5298;
@@ -206,30 +317,13 @@
             background: #2a5298;
         }
 
-        .timeline-item h4 {
-            color: #1e3c72;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .timeline-item .date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
         /* Publications */
         .publication {
-            padding: 1.5rem;
+            padding: 1.2rem;
             background: #f8f9fa;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             border-left: 4px solid #2a5298;
-        }
-
-        .publication h4 {
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
         }
 
         .publication p {
@@ -248,12 +342,12 @@
             text-decoration: underline;
         }
 
-        /* Contact Section */
+        /* Contact Grid */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .contact-item {
@@ -272,16 +366,43 @@
             justify-content: center;
             color: white;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         .contact-item a {
             color: #2a5298;
             text-decoration: none;
-            word-break: break-all;
+            word-break: break-word;
         }
 
         .contact-item a:hover {
             text-decoration: underline;
+        }
+
+        /* Languages */
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .language-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #1e3c72;
+            margin-bottom: 0.3rem;
+        }
+
+        .language-level {
+            font-size: 0.9rem;
+            color: #666;
         }
 
         /* Footer */
@@ -290,21 +411,22 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .nav-links {
-                display: none;
+                font-size: 0.85rem;
+                gap: 1rem;
             }
 
             section {
-                padding: 2rem;
+                padding: 1.5rem;
             }
 
             .hero-content {
@@ -312,8 +434,9 @@
                 text-align: center;
             }
 
-            .hero-text {
-                text-align: center;
+            .hero-image {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
@@ -323,8 +446,9 @@
         <nav>
             <div class="logo">Facundo Herrera, Ph.D</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -333,11 +457,11 @@
 
     <section class="hero">
         <div class="hero-content">
-            <img src="FH pic ispica.jpg" alt="Facundo Herrera" class="hero-image">
+            <img src="photo.jpg" alt="Facundo Herrera" class="hero-image">
             <div class="hero-text">
                 <h1>Facundo Herrera, Ph.D</h1>
-                <p class="subtitle">Associate Director & Senior Economist at Ipsos UK</p>
-                <p>Leading programme evaluation projects using experimental and quasi-experimental designs, with 15+ years of experience in causal inference and evaluation methodology.</p>
+                <p class="subtitle">Associate Director @ Ipsos UK | Health Economist | EU Impact Assessment & Evaluation Specialist</p>
+                <p class="summary">Health economist and evaluation specialist with over 20 years of experience designing and leading rigorous impact evaluations for the European Commission, UK Government, World Bank, and Inter-American Development Bank. Specialising in EU Better Regulation, with expertise spanning experimental designs (RCTs), quasi-experimental methods, and economic evaluation.</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
                     <a href="#publications" class="btn btn-secondary">View Research</a>
@@ -347,22 +471,252 @@
     </section>
 
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>I am Associate Director and Senior Economist at Ipsos UK, where I lead programme evaluation projects using experimental and quasi-experimental designs. I hold a PhD in Health Economics and Policy from Lancaster University, with research focused on health inequities, and bring over 15 years of applied experience in causal inference and evaluation methodology.</p>
-                
-                <p>My current work focuses on designing and implementing rigorous evaluation frameworks for policy interventions, with particular expertise in randomised controlled trials, difference-in-differences designs, and other causal inference methods to measure real-world programme effectiveness, complemented by process evaluations.</p>
-
-                <h3>Research Interests</h3>
-                <div class="research-interests">
-                    <span class="tag">Economics of Education</span>
-                    <span class="tag">Health Economics</span>
-                    <span class="tag">Health Inequalities</span>
-                    <span class="tag">Mental Health</span>
-                    <span class="tag">Youth</span>
-                    <span class="tag">Intersectionality</span>
+        <section id="expertise">
+            <h2>Areas of Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h4>EU Better Regulation</h4>
+                    <ul>
+                        <li>Impact assessments</li>
+                        <li>Policy evaluations</li>
+                        <li>Regulatory compliance</li>
+                        <li>Stakeholder consultation</li>
+                    </ul>
                 </div>
+                <div class="expertise-card">
+                    <h4>Evaluation Methods</h4>
+                    <ul>
+                        <li>Randomised controlled trials (RCTs)</li>
+                        <li>Propensity score matching (PSM)</li>
+                        <li>Difference-in-differences (DiD)</li>
+                        <li>Inverse probability weighting (IPW)</li>
+                        <li>Synthetic control methods</li>
+                        <li>Interrupted time series (ITS)</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>Economic Analysis</h4>
+                    <ul>
+                        <li>Cost-benefit analysis (CBA)</li>
+                        <li>Cost-effectiveness analysis (CEA)</li>
+                        <li>Social return on investment (SROI)</li>
+                        <li>Value for money assessments</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>Sectors</h4>
+                    <ul>
+                        <li>Health & public health</li>
+                        <li>Education & employment</li>
+                        <li>Social policy & inclusion</li>
+                        <li>Digital & cybersecurity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Languages</h3>
+            <div class="languages-grid">
+                <div class="language-item">
+                    <div class="language-name">Spanish</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Italian</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Native/Bilingual</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">French</div>
+                    <div class="language-level">Professional</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Portuguese</div>
+                    <div class="language-level">Professional</div>
+                </div>
+            </div>
+
+            <h3>Certifications & Training</h3>
+            <div class="tags">
+                <span class="tag">Survey Sampling</span>
+                <span class="tag">Focus Groups</span>
+                <span class="tag">Impact Evaluation (RCTs & Quasi-experimental)</span>
+                <span class="tag">Advanced Machine Learning (Stata)</span>
+                <span class="tag">Foundations of Development Policy (MIT 14.74x)</span>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Associate Director</div>
+                    <div class="experience-org">Ipsos UK</div>
+                    <div class="experience-date">February 2023 - Present</div>
+                    <div class="experience-location">London, England, United Kingdom</div>
+                </div>
+                <ul>
+                    <li>Directing impact evaluations for UK government departments (DCMS, DLUHC, Cabinet Office) and charitable foundations (Youth Endowment Fund)</li>
+                    <li>Project Director for two Youth Endowment Fund RCTs: trauma-informed practice in schools (experimental + quasi-experimental design) and Inspiring Futures sport-based intervention</li>
+                    <li>Leading counterfactual impact evaluation of the £10M+ Uniformed Youth Fund (DCMS), assessing outcomes across cadet and scout organisations nationally</li>
+                    <li>Task Leader for quasi-experimental evaluation of the Domestic Abuse statutory duty on safe accommodation (DLUHC)</li>
+                    <li>Managed Cabinet Office Evaluation Task Force project reviewing evaluation plans of major government programmes</li>
+                    <li>Managing teams of 5-10 researchers; responsible for methodology, budgets, quality assurance, and client delivery</li>
+                    <li>Providing RCT and quasi-experimental design advice across Ipsos bids and live projects</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Visiting Researcher - Public Health</div>
+                    <div class="experience-org">De Montfort University</div>
+                    <div class="experience-date">June 2024 - Present</div>
+                    <div class="experience-location">Leicester, England, United Kingdom</div>
+                </div>
+                <ul>
+                    <li>Honorary academic position in the Faculty of Health and Life Sciences (HLS)</li>
+                    <li>Delivering lectures on statistics and quantitative methods for biomedical science students</li>
+                    <li>Contributing to the university's research and teaching capacity in applied health economics and evaluation</li>
+                    <li>Research interests in health inequities, with a PhD thesis focused on ethnic mental health inequalities in the UK</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Managing Consultant / Senior Economist</div>
+                    <div class="experience-org">ICF</div>
+                    <div class="experience-date">April 2020 - February 2023 (3 years)</div>
+                    <div class="experience-location">London, United Kingdom</div>
+                </div>
+                <ul>
+                    <li>Promoted to Managing Consultant, leading evaluation and impact assessment studies exceeding €500K for the European Commission</li>
+                    <li>Project Manager for the Social Situation Monitor (DG EMPL) — €2M contract delivered over four years with a team of 10 colleagues and network of European academic partners</li>
+                    <li>Technical expert for the European Health Data Space Impact Assessment (DG SANTE, €500K) — advised on research design, indicator frameworks, and Better Regulation compliance</li>
+                    <li>Led impact assessment for the NIS Directive cybersecurity review (DG CONNECT) — designed analytical framework, economic modelling, and cost-benefit analysis</li>
+                    <li>Contributed to the Impact Assessment on AI regulatory requirements (DG CONNECT), delivered in partnership with CEPS</li>
+                    <li>Technical expert for revision of EU Blood, Tissues and Cells Directive (CHAFEA)</li>
+                    <li>Developed input-output model estimating R&D impact on GDP and employment for Online Platforms/Gatekeeper study (DG CONNECT)</li>
+                    <li>Project Manager for the evaluation of the EU Recommendation on Digitisation of Cultural Heritage (DG CONNECT), leading team of seven ICF colleagues and six subcontracted experts</li>
+                    <li>Line managed four junior to senior economists</li>
+                    <li>Chaired ICF's Quantitative Community of Practice, delivering training and mentoring on quantitative methods across the organisation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Senior Consultant / Senior Economist</div>
+                    <div class="experience-org">ICF</div>
+                    <div class="experience-date">March 2018 - April 2020 (2 years)</div>
+                    <div class="experience-location">London, United Kingdom</div>
+                </div>
+                <ul>
+                    <li>Promoted to lead quantitative workstreams and manage complex evaluation projects for EU institutions</li>
+                    <li>Led counterfactual impact evaluation (PSM) for the EUandME communication campaign (DG COMM) — €12.3M campaign, €362K evaluation budget</li>
+                    <li>Designed counterfactual analysis for the Equal Pay Directive evaluation (DG JUST), including Oaxaca-Blinder decomposition of the gender pay gap</li>
+                    <li>Led mediation analysis (SEM) for the Entrepreneurship Education impact study (DG EAC)</li>
+                    <li>Technical expert for the Salt, Sugar and Fat Reformulation Monitoring feasibility study (CHAFEA), overseeing the public health impact assessment</li>
+                    <li>Delivered econometric analysis on survey microdata (EU-SILC, EU-LFS), producing Stata dofiles automating social indicator calculations (Gini coefficients, poverty rates)</li>
+                    <li>Contributed to Beijing +25 gender equality review (EIGE), constructing indicators using an intersectional approach</li>
+                    <li>Country expert for Spain, Italy, and Portugal; conducted fieldwork in five languages</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Analyst/Economist (Home Affairs and Social Policy)</div>
+                    <div class="experience-org">RAND Europe</div>
+                    <div class="experience-date">August 2016 - May 2017</div>
+                    <div class="experience-location">Cambridge, United Kingdom</div>
+                </div>
+                <ul>
+                    <li>Project Manager for the MITA Trial (Maximising Impact of Teaching Assistants), an RCT funded by the Education Endowment Foundation — managed team of 5 colleagues and partners including Cambridge University, budget above £300K</li>
+                    <li>Designed and submitted trial protocol and statistical analysis plan (SAP); developed fieldwork tools including surveys, questionnaires, and classroom observation instruments</li>
+                    <li>Drafted RCT protocols and statistical analysis plans for three additional EEF trials</li>
+                    <li>Led impact assessment tasks for the study on fraud and counterfeiting of non-cash means of payment (DG HOME) — managed team of 8 colleagues, budget above €100K, followed EU Better Regulation Guidelines</li>
+                    <li>Conducted quasi-experimental analysis: propensity score matching, diff-in-diff, interrupted time series</li>
+                    <li>Delivered multinomial logit analysis for the Sentencing Council evaluation of drug and theft offence guidelines</li>
+                    <li>Authored published policy brief on education of EU migrant children in Member States</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Research Manager / Research Assistant</div>
+                    <div class="experience-org">Ecorys UK</div>
+                    <div class="experience-date">August 2013 - July 2016 (3 years)</div>
+                    <div class="experience-location">Birmingham, United Kingdom</div>
+                </div>
+                <ul>
+                    <li>Project Manager for the International Citizen Service evaluation (DFID) — £200K global evaluation across 12 countries, led team of 10, designed and implemented survey analysis (ANCOVA, t-test, factor analysis)</li>
+                    <li>Project Manager for Upskilling Adults cost-benefit analysis (DG EAC) — led team of 5, designed CBA methodology and delivered estimates on returns to adult education</li>
+                    <li>Task Leader for econometric analysis on basic competences and educational attainment (DG EAC) — implemented multilevel models (fixed and random coefficients) on PIAAC microdata</li>
+                    <li>Delivered propensity score matching for The Cadet Experience study (DfE) — matched Cadet survey with LSYPE comparison group</li>
+                    <li>Designed PSM with phase-in approach and cost-benefit analysis for Sunderland Family Focus evaluation (Troubled Families programme)</li>
+                    <li>Contributed to cost-benefit analysis for national Troubled Families evaluation (DCLG)</li>
+                    <li>Delivered CBA for Employability through Sport study (Laureus Foundation), assessing returns to sport-based youth employment programmes in Brazil</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Liquidity Agent</div>
+                    <div class="experience-org">Bank of New York Mellon</div>
+                    <div class="experience-date">February 2011 - September 2012</div>
+                    <div class="experience-location">Brussels, Belgium</div>
+                </div>
+                <ul>
+                    <li>Applied time-series econometrics to forecast daily cash balances, improving accuracy of liquidity estimates for the bank's treasury operations</li>
+                    <li>Developed standard operating procedures (SOPs) and methodological guidelines for cash estimation, used by a team of 15 analysts</li>
+                    <li>Conducted research on EU financial regulation to assess potential impacts on business operations</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Research Economist</div>
+                    <div class="experience-org">European Foundation for the Improvement of Living and Working Conditions (Eurofound)</div>
+                    <div class="experience-date">April 2010 - September 2010</div>
+                    <div class="experience-location">Dublin, Republic of Ireland</div>
+                </div>
+                <ul>
+                    <li>Developed an economic analysis toolkit tailored to Eurofound's context, providing guidance on cost-benefit analysis, cost-effectiveness analysis, and project appraisal</li>
+                    <li>Contributed to the Foundation Forum Evaluation, leading the value-for-money analysis</li>
+                    <li>Delivered training workshops on economic analysis methods (CBA, CEA) for Eurofound staff</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Junior Credit Analyst</div>
+                    <div class="experience-org">Banco BICE SA</div>
+                    <div class="experience-date">November 2007 - January 2009</div>
+                    <div class="experience-location">Córdoba, Argentina</div>
+                </div>
+                <ul>
+                    <li>Drafted credit appraisal reports for the Board of Directors, providing economic analysis of applicant companies and their sectors</li>
+                    <li>Conducted sectoral studies using industrial organisation economics to identify high-growth sectors with strong credit absorption potential</li>
+                    <li>Delivered project appraisal, cost-benefit analysis, and ex-ante impact assessment for private investment projects seeking development finance</li>
+                    <li>Executed field research across five provinces in Argentina, conducting interviews with SMEs, chambers of commerce, and industry stakeholders</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Financial Project Management</div>
+                    <div class="experience-org">Grupo de Promoción Villa Obispo Angelelli</div>
+                    <div class="experience-date">September 2001 - October 2007 (6 years)</div>
+                    <div class="experience-location">Córdoba, Argentina</div>
+                </div>
+                <ul>
+                    <li>Managed seven social development projects funded by the World Bank, Inter-American Development Bank (IDB), and national/local government, focused on poverty alleviation, gender, health, and education</li>
+                    <li>Designed and implemented monitoring and evaluation frameworks, including baseline studies and outcome tracking</li>
+                    <li>Conducted value-for-money, cost-effectiveness, and social return on investment (SROI) analysis across the project portfolio</li>
+                    <li>Managed a microfinance project funded by the Ministry of Social Development of Córdoba</li>
+                    <li>Responsible for budget management and financial KPIs, ensuring compliance with World Bank, IDB, and government donor guidelines</li>
+                </ul>
             </div>
         </section>
 
@@ -371,80 +725,66 @@
             <div class="timeline-item">
                 <h4>PhD in Health Economics and Policy</h4>
                 <p class="date">Lancaster University (UK) | 2019-2024</p>
+                <p>Thesis: Exploring the association between ethnicity and mental health inequities: A study of ethnic minorities in the UK</p>
             </div>
             <div class="timeline-item">
                 <h4>MA in European Economic Studies</h4>
-                <p class="date">College of Europe (Bruges, Belgium) | 2012</p>
+                <p class="date">College of Europe (Bruges, Belgium) | 2012-2013</p>
+                <p>Awarded College of Europe - MAE Italy Scholarship</p>
             </div>
             <div class="timeline-item">
-                <h4>Lic in Economics (BA+MA)</h4>
+                <h4>MSc in Economics (Lic in Economics)</h4>
                 <p class="date">Universidad Nacional de Córdoba (Argentina) | 2002-2007</p>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="timeline-item">
-                <h4>Associate Director and Senior Economist</h4>
-                <p class="date">Ipsos UK | 2023-present</p>
-            </div>
-            <div class="timeline-item">
-                <h4>Visiting Researcher</h4>
-                <p class="date">De Montfort University (UK) | 2024-present</p>
-            </div>
-            <div class="timeline-item">
-                <h4>Managing Consultant/Senior Economist</h4>
-                <p class="date">ICF | 2017-2023</p>
-            </div>
-            <div class="timeline-item">
-                <h4>Analyst/Economist</h4>
-                <p class="date">RAND Europe | 2016-2017</p>
-            </div>
-            <div class="timeline-item">
-                <h4>Research Manager/Economist</h4>
-                <p class="date">Ecorys UK | 2013-2016</p>
+                <p>Specialisation: Industrial Organisation, Advanced Macro and Microeconomics</p>
             </div>
         </section>
 
         <section id="publications">
-            <h2>Publications</h2>
+            <h2>Publications & Research</h2>
             
             <h3>Under Review/Submitted</h3>
             <div class="publication">
-                <p><strong>Does more education improve mental health for ethnic minorities in the UK? The impact of ROSLA 1972</strong> - Submitted</p>
+                <p><strong>Does more education improve mental health for ethnic minorities in the UK? The impact of ROSLA 1972</strong> — Submitted</p>
             </div>
 
             <h3>Working Papers</h3>
             <div class="publication">
-                <p><strong>An intersectional Oaxaca-Blinder decomposition of the ethnic and sex mental health inequities in the UK</strong> - Work in progress</p>
+                <p><strong>An intersectional Oaxaca-Blinder decomposition of the ethnic and sex mental health inequities in the UK</strong> — Work in progress</p>
             </div>
             <div class="publication">
-                <p><strong>A systematic review of the relationship between ethnicity and mental health inequities in the UK</strong> - Work in progress</p>
+                <p><strong>A systematic review of the relationship between ethnicity and mental health inequities in the UK</strong> — Work in progress</p>
             </div>
 
             <h3>Published</h3>
             <div class="publication">
-                <h4>Doctoral Thesis</h4>
-                <p>HERRERA, F., Exploring the association between ethnicity and mental health inequities: A study of ethnic minorities in the UK. [Doctoral Thesis, Lancaster University]. Lancaster University.</p>
+                <p><strong>HERRERA, F.</strong> (2024). Exploring the association between ethnicity and mental health inequities: A study of ethnic minorities in the UK. [Doctoral Thesis, Lancaster University].</p>
                 <p><a href="https://doi.org/10.17635/lancaster/thesis/2549" target="_blank">https://doi.org/10.17635/lancaster/thesis/2549</a></p>
             </div>
 
             <div class="publication">
-                <p>BOULDING, H., KAMENETZKY, A., GHIGA, I., IOPPOLO, B., HERRERA, F., PARKS, S., MANVILLE, C., GUTHRIE, S. AND HINRICHS-KRAPELS, S., (2020). Mechanisms and pathways to impact in public health research: a preliminary analysis of research funded by the National Institute for Health Research (NIHR). BMC Medical Research Methodology, 20(1), pp.1-20.</p>
+                <p><strong>BOULDING, H., KAMENETZKY, A., GHIGA, I., IOPPOLO, B., HERRERA, F., PARKS, S., MANVILLE, C., GUTHRIE, S. AND HINRICHS-KRAPELS, S.</strong> (2020). Mechanisms and pathways to impact in public health research: a preliminary analysis of research funded by the National Institute for Health Research (NIHR). <em>BMC Medical Research Methodology</em>, 20(1), pp.1-20.</p>
             </div>
 
             <div class="publication">
-                <p>DEPARTMENT OF EDUCATION (2018). The Cadet Experience: Understanding Cadet Outcomes. Research Report.</p>
+                <p><strong>DEPARTMENT OF EDUCATION</strong> (2018). The Cadet Experience: Understanding Cadet Outcomes. Research Report.</p>
                 <p><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/689698/The_cadet_experience-understanding_cadet_outcomes.pdf" target="_blank">View Report</a></p>
             </div>
 
             <div class="publication">
-                <p>HARTE, E., HERRERA, F., STEPANEK, M. (2016). Education of EU migrant children in EU Member States. Santa Monica, CA: RAND Corporation.</p>
+                <p><strong>HARTE, E., HERRERA, F., STEPANEK, M.</strong> (2016). Education of EU migrant children in EU Member States. Santa Monica, CA: RAND Corporation.</p>
                 <p><a href="http://www.rand.org/pubs/research_reports/RR1715.html" target="_blank">http://www.rand.org/pubs/research_reports/RR1715.html</a></p>
             </div>
 
             <div class="publication">
-                <p>MEIERKORD, A., DONLEVY, D., PENSIERO, N., HERRERA, F., & GREEN, A. D. (2016). Study of the Link between the Levels of Basic Competences and Formal Educational Attainment in a Cross-Country and Comparative Perspective. European Commission.</p>
+                <p><strong>MEIERKORD, A., DONLEVY, D., PENSIERO, N., HERRERA, F., & GREEN, A. D.</strong> (2016). Study of the Link between the Levels of Basic Competences and Formal Educational Attainment in a Cross-Country and Comparative Perspective. European Commission.</p>
+            </div>
+
+            <div class="publication">
+                <p><strong>HERRERA, F.</strong> (2013). From flexicurity towards flexicapability. College of Europe.</p>
+            </div>
+
+            <div class="publication">
+                <p><strong>HERRERA, F.</strong> (2006). Crecimiento del Producto Bruto Geográfico de las Provincias Argentinas. Jornadas Internacionales de Finanzas Públicas, Córdoba.</p>
             </div>
         </section>
 
@@ -461,6 +801,13 @@
                 <div class="contact-item">
                     <div class="contact-icon">🏢</div>
                     <div>
+                        <strong>Ipsos UK</strong><br>
+                        <a href="mailto:facundo.herrera@ipsos.com">facundo.herrera@ipsos.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🏢</div>
+                    <div>
                         <strong>Lancaster University</strong><br>
                         <a href="mailto:f.herrera@lancaster.ac.uk">f.herrera@lancaster.ac.uk</a>
                     </div>
@@ -468,22 +815,15 @@
                 <div class="contact-item">
                     <div class="contact-icon">🏢</div>
                     <div>
-                        <strong>Ipsos</strong><br>
-                        <a href="mailto:facundo.herrera@ipsos.com">facundo.herrera@ipsos.com</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🏢</div>
-                    <div>
                         <strong>De Montfort University</strong><br>
-                        <a href="mailto:facundo.herrera@dmu.ac.uk">facundo.herrera@dmu.ac.uk</a>
+                        <a href="mailto:f.herrera@dmu.ac.uk">f.herrera@dmu.ac.uk</a>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">💼</div>
                     <div>
                         <strong>LinkedIn</strong><br>
-                        <a href="https://www.linkedin.com/in/facundo-herrera/" target="_blank">linkedin.com/in/facundo-herrera</a>
+                        <a href="https://www.linkedin.com/in/facundoherrera/" target="_blank">linkedin.com/in/facundoherrera</a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -498,7 +838,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Facundo Herrera. All rights reserved.</p>
+        <p>&copy; 2025 Facundo Herrera, Ph.D. All rights reserved.</p>
     </footer>
 </body>
 </html>
